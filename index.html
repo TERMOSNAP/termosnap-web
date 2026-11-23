@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Termo SNAP — Soon</title>
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html, body {
+      height: 100%;
+      width: 100%;
+    }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem 1.25rem;
+      background:
+        radial-gradient(circle at 50% 42%, #142230 0%, #0b131c 56%, #06090e 100%);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Inter, Helvetica, Arial, sans-serif;
+      color: #e2e8f0;
+      overflow-x: hidden;
+    }
+
+    main {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      max-width: 960px;
+      text-align: center;
+      gap: 2.25rem;
+    }
+
+    .pipe-wordmark {
+      width: 100%;
+      max-width: 780px;
+      height: auto;
+      display: block;
+      filter:
+        drop-shadow(0 0 28px rgba(125, 211, 252, 0.14))
+        drop-shadow(0 20px 30px rgba(0, 0, 0, 0.82));
+    }
+
+    @keyframes waveFlowSlow {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-240px); }
+    }
+
+    @keyframes waveFlowFast {
+      0% { transform: translateX(-240px); }
+      100% { transform: translateX(0); }
+    }
+
+    @keyframes streamFlow {
+      0% { transform: translateX(-260px); }
+      100% { transform: translateX(0); }
+    }
+
+    @keyframes mistDrift {
+      0% { transform: translateX(-180px); opacity: 0.38; }
+      50% { opacity: 0.56; }
+      100% { transform: translateX(0); opacity: 0.38; }
+    }
+
+    .wave-slow {
+      animation: waveFlowSlow 4.5s linear infinite;
+    }
+
+    .wave-fast {
+      animation: waveFlowFast 2.8s linear infinite;
+    }
+
+    .stream-flow {
+      animation: streamFlow 2.2s linear infinite;
+    }
+
+    .mist-drift {
+      animation: mistDrift 6.5s ease-in-out infinite alternate;
+    }
+
+    .contact-email {
+      display: inline-block;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      font-size: clamp(0.95rem, 2.2vw, 1.2rem);
+      letter-spacing: 0.08em;
+      color: #cbd5e1;
+      text-decoration: none;
+      padding: 0.55rem 1.2rem;
+      border-radius: 9999px;
+      border: 1px solid rgba(148, 163, 184, 0.24);
+      background: rgba(15, 23, 42, 0.48);
+      transition: color 0.2s ease, border-color 0.2s ease, background 0.2s ease, transform 0.2s ease;
+    }
+
+    .contact-email:hover,
+    .contact-email:focus-visible {
+      color: #ffffff;
+      border-color: rgba(125, 211, 252, 0.65);
+      background: rgba(14, 116, 144, 0.3);
+      transform: translateY(-1px);
+      outline: none;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <svg class="pipe-wordmark" viewBox="0 0 800 230" role="img" aria-label="SOON">
+      <defs>
+        <clipPath id="soonClip">
+          <text x="400" y="174" text-anchor="middle" font-family="Arial Black, Impact, 'Segoe UI', system-ui, sans-serif" font-weight="900" font-size="188" letter-spacing="14">SOON</text>
+        </clipPath>
+        <linearGradient id="pipeInterior" x1="0%" y1="0%" x2="0%" y2="100%">
+          <stop offset="0%" stop-color="#050b14" />
+          <stop offset="22%" stop-color="#0d1e2f" />
+          <stop offset="50%" stop-color="#142d42" />
+          <stop offset="82%" stop-color="#091624" />
+          <stop offset="100%" stop-color="#03070d" />
+        </linearGradient>
+        <linearGradient id="waterBack" x1="0%" y1="0%" x2="0%" y2="100%">
+          <stop offset="0%" stop-color="#67e8f9" stop-opacity="0.72" />
+          <stop offset="18%" stop-color="#0ea5e9" stop-opacity="0.88" />
+          <stop offset="58%" stop-color="#0369a1" stop-opacity="0.95" />
+          <stop offset="100%" stop-color="#06243b" stop-opacity="0.98" />
+        </linearGradient>
+        <linearGradient id="waterFront" x1="0%" y1="0%" x2="0%" y2="100%">
+          <stop offset="0%" stop-color="#ecfeff" stop-opacity="0.95" />
+          <stop offset="8%" stop-color="#67e8f9" stop-opacity="0.82" />
+          <stop offset="32%" stop-color="#0ea5e9" stop-opacity="0.76" />
+          <stop offset="72%" stop-color="#0284c7" stop-opacity="0.88" />
+          <stop offset="100%" stop-color="#082f49" stop-opacity="0.96" />
+        </linearGradient>
+        <linearGradient id="coldMistGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+          <stop offset="0%" stop-color="#e0f2fe" stop-opacity="0.02" />
+          <stop offset="55%" stop-color="#bae6fd" stop-opacity="0.18" />
+          <stop offset="100%" stop-color="#e0f2fe" stop-opacity="0.34" />
+        </linearGradient>
+        <linearGradient id="glassSheen" x1="0%" y1="0%" x2="0%" y2="100%">
+          <stop offset="0%" stop-color="#e0f2fe" stop-opacity="0.38" />
+          <stop offset="14%" stop-color="#bae6fd" stop-opacity="0.14" />
+          <stop offset="36%" stop-color="#ffffff" stop-opacity="0.04" />
+          <stop offset="68%" stop-color="#7dd3fc" stop-opacity="0.05" />
+          <stop offset="100%" stop-color="#e0f2fe" stop-opacity="0.2" />
+        </linearGradient>
+        <linearGradient id="pipeRim" x1="0%" y1="0%" x2="0%" y2="100%">
+          <stop offset="0%" stop-color="#f1f5f9" />
+          <stop offset="28%" stop-color="#bae6fd" />
+          <stop offset="62%" stop-color="#475569" />
+          <stop offset="100%" stop-color="#0f172a" />
+        </linearGradient>
+        <radialGradient id="dropGrad" cx="35%" cy="30%" r="65%">
+          <stop offset="0%" stop-color="#ffffff" stop-opacity="0.95" />
+          <stop offset="35%" stop-color="#e0f2fe" stop-opacity="0.55" />
+          <stop offset="80%" stop-color="#38bdf8" stop-opacity="0.28" />
+          <stop offset="100%" stop-color="#082f49" stop-opacity="0.65" />
+        </radialGradient>
+        <filter id="softBlur" x="-10%" y="-10%" width="120%" height="120%">
+          <feGaussianBlur stdDeviation="4" />
+        </filter>
+      </defs>
+      <text x="400" y="174" text-anchor="middle" font-family="Arial Black, Impact, 'Segoe UI', system-ui, sans-serif" font-weight="900" font-size="188" letter-spacing="14" fill="#020617" opacity="0.8" transform="translate(0, 8)">SOON</text>
+      <g clip-path="url(#soonClip)">
+        <rect x="0" y="0" width="800" height="230" fill="url(#pipeInterior)" />
+        <g class="mist-drift" filter="url(#softBlur)">
+          <path d="M -40 105 Q 50 62 150 86 T 340 78 T 530 90 T 720 74 T 910 88 L 910 128 L -40 128 Z" fill="url(#coldMistGrad)" />
+        </g>
+        <g class="wave-slow">
+          <path d="M 0 92 Q 60 75 120 92 T 240 92 T 360 92 T 480 92 T 600 92 T 720 92 T 840 92 T 960 92 T 1080 92 L 1080 230 L 0 230 Z" fill="url(#waterBack)" />
+        </g>
+        <g class="wave-fast">
+          <path d="M 0 100 Q 60 116 120 100 T 240 100 T 360 100 T 480 100 T 600 100 T 720 100 T 840 100 T 960 100 T 1080 100 L 1080 230 L 0 230 Z" fill="url(#waterFront)" />
+          <path d="M 0 100 Q 60 116 120 100 T 240 100 T 360 100 T 480 100 T 600 100 T 720 100 T 840 100 T 960 100 T 1080 100" fill="none" stroke="#ecfeff" stroke-opacity="0.88" stroke-width="2.2" />
+        </g>
+        <g class="stream-flow">
+          <path d="M 15 126 Q 85 114 165 128 T 275 124" stroke="#cffafe" stroke-opacity="0.45" stroke-width="4" stroke-linecap="round" fill="none" filter="url(#softBlur)" />
+          <path d="M 275 126 Q 345 114 425 128 T 535 124" stroke="#cffafe" stroke-opacity="0.45" stroke-width="4" stroke-linecap="round" fill="none" filter="url(#softBlur)" />
+          <path d="M 535 126 Q 605 114 685 128 T 795 124" stroke="#cffafe" stroke-opacity="0.45" stroke-width="4" stroke-linecap="round" fill="none" filter="url(#softBlur)" />
+          <path d="M 795 126 Q 865 114 945 128 T 1055 124" stroke="#cffafe" stroke-opacity="0.45" stroke-width="4" stroke-linecap="round" fill="none" filter="url(#softBlur)" />
+          <path d="M 35 148 Q 100 156 170 146" stroke="#a5f3fc" stroke-opacity="0.55" stroke-width="1.8" stroke-linecap="round" fill="none" />
+          <path d="M 295 148 Q 360 156 430 146" stroke="#a5f3fc" stroke-opacity="0.55" stroke-width="1.8" stroke-linecap="round" fill="none" />
+          <path d="M 555 148 Q 620 156 690 146" stroke="#a5f3fc" stroke-opacity="0.55" stroke-width="1.8" stroke-linecap="round" fill="none" />
+          <path d="M 815 148 Q 880 156 950 146" stroke="#a5f3fc" stroke-opacity="0.55" stroke-width="1.8" stroke-linecap="round" fill="none" />
+          <circle cx="72" cy="142" r="2.8" fill="#ecfeff" fill-opacity="0.82" />
+          <circle cx="118" cy="162" r="1.6" fill="#cffafe" fill-opacity="0.75" />
+          <circle cx="188" cy="124" r="2.1" fill="#ecfeff" fill-opacity="0.85" />
+          <circle cx="238" cy="166" r="3.2" fill="#a5f3fc" fill-opacity="0.7" />
+          <circle cx="332" cy="142" r="2.8" fill="#ecfeff" fill-opacity="0.82" />
+          <circle cx="378" cy="162" r="1.6" fill="#cffafe" fill-opacity="0.75" />
+          <circle cx="448" cy="124" r="2.1" fill="#ecfeff" fill-opacity="0.85" />
+          <circle cx="498" cy="166" r="3.2" fill="#a5f3fc" fill-opacity="0.7" />
+          <circle cx="592" cy="142" r="2.8" fill="#ecfeff" fill-opacity="0.82" />
+          <circle cx="638" cy="162" r="1.6" fill="#cffafe" fill-opacity="0.75" />
+          <circle cx="708" cy="124" r="2.1" fill="#ecfeff" fill-opacity="0.85" />
+          <circle cx="758" cy="166" r="3.2" fill="#a5f3fc" fill-opacity="0.7" />
+          <circle cx="852" cy="142" r="2.8" fill="#ecfeff" fill-opacity="0.82" />
+        </g>
+        <rect x="0" y="0" width="800" height="230" fill="url(#glassSheen)" />
+        <g opacity="0.92">
+          <circle cx="116" cy="64" r="2.6" fill="url(#dropGrad)" />
+          <circle cx="156" cy="54" r="3.2" fill="url(#dropGrad)" />
+          <circle cx="104" cy="118" r="2.2" fill="url(#dropGrad)" />
+          <circle cx="164" cy="144" r="3.4" fill="url(#dropGrad)" />
+          <circle cx="132" cy="164" r="2.4" fill="url(#dropGrad)" />
+          <circle cx="252" cy="72" r="3.0" fill="url(#dropGrad)" />
+          <circle cx="322" cy="62" r="2.4" fill="url(#dropGrad)" />
+          <circle cx="242" cy="134" r="2.8" fill="url(#dropGrad)" />
+          <circle cx="332" cy="148" r="3.5" fill="url(#dropGrad)" />
+          <circle cx="288" cy="168" r="2.2" fill="url(#dropGrad)" />
+          <circle cx="436" cy="64" r="2.8" fill="url(#dropGrad)" />
+          <circle cx="512" cy="78" r="3.3" fill="url(#dropGrad)" />
+          <circle cx="428" cy="142" r="2.3" fill="url(#dropGrad)" />
+          <circle cx="516" cy="154" r="3.1" fill="url(#dropGrad)" />
+          <circle cx="472" cy="166" r="2.5" fill="url(#dropGrad)" />
+          <circle cx="604" cy="66" r="2.9" fill="url(#dropGrad)" />
+          <circle cx="634" cy="112" r="3.4" fill="url(#dropGrad)" />
+          <circle cx="688" cy="60" r="2.5" fill="url(#dropGrad)" />
+          <circle cx="678" cy="148" r="3.2" fill="url(#dropGrad)" />
+          <circle cx="610" cy="160" r="2.2" fill="url(#dropGrad)" />
+        </g>
+      </g>
+      <text x="400" y="174" text-anchor="middle" font-family="Arial Black, Impact, 'Segoe UI', system-ui, sans-serif" font-weight="900" font-size="188" letter-spacing="14" fill="none" stroke="url(#pipeRim)" stroke-width="6" stroke-linejoin="round">SOON</text>
+      <text x="400" y="174" text-anchor="middle" font-family="Arial Black, Impact, 'Segoe UI', system-ui, sans-serif" font-weight="900" font-size="188" letter-spacing="14" fill="none" stroke="#e0f2fe" stroke-opacity="0.4" stroke-width="1.4" stroke-linejoin="round">SOON</text>
+    </svg>
+    <a class="contact-email" href="mailto:hola@termosnap.com">hola@termosnap.com</a>
+  </main>
+</body>
+</html>
